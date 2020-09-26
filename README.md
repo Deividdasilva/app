@@ -1,3 +1,19 @@
+                                        
+                                         Relatorio
+    Criei o projeto contento os componentes Header onde coloquei apenas um titulo, o Registration onde fiz o      formulario de cadastro,com handleInputChange que dispara toda vez que um campo do formulário for alterado,
+    a handleSubmit ela faz a função de pegar o name digitado e salvar essa informação, a UseEffect é um Hook que serve para lidar com os efeitos, permite que o componente em forma de função, tem acesso aos métodos de ciclo de vida sem precisar refatorar seu componente para uma classe, e criei o formulario para pegar as informações.
+    O List com funções para listar, editar e excluir os cadastros. O firebase.js esta o arquivo de conexão onde o mesmo ainda não tinha utilizado, mais resolve procurar e ver como funciona, realizei o deploy do projeto pelo hosting do firebase.
+    Utilizei as bibliotecas React Bootstrap e styled-components.
+    Fiz o que foi solicitado e fiz os testes de:  
+        1 - Inserir conteúdo na tabela
+        2 - Editar o conteúdo da tabela.
+        3 - Remover conteúdo da tabela.
+        4 - Paginar a tabela (Pode ser paginação do pelo front-end).
+        5 - Visualizar de forma clara os dados apresentados.
+    Tive dificuldades em algumas coisas, pois algumas ainda não tinha utilizado,mais desafios ajudam agente a aprender e crescer na area,agradeço a opotunidade de poder participar do Processo e espero que consiga passar e fazer parte da equipe de vocês.
+    Obrigado!!!
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

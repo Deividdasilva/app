@@ -1,12 +1,12 @@
 import React from "react";
+import { Titulo } from "../styles";
 
 function Header() {
   return (
-    <header className="jumbotron jumbotron-fluid text-center">
-      <h3>Processo seletivo Softwrap</h3>
-      <h6>Teste de habilidades - Processo seletivo Softwrap</h6>
-
-    </header>
+    <Titulo>
+      Processo seletivo Softwrap <br></br>
+      Teste de habilidades - Processo seletivo Softwrap
+      </Titulo>
   );
 }
 

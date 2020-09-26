@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { db } from '../firebase';
-import Form from './Form';
+import Registration from './Registration';
+import { Table } from  'react-bootstrap' ;
+import { Listagem } from "../styles";
+import { Formulario, Title} from "../styles";
 
 const List = () => {
 
@@ -22,7 +25,7 @@ const List = () => {
     };
 
     const onDeleteList = async (id) => {
-        if (window.confirm("are you sure you to delete this list?")){
+        if (window.confirm("Tem certeza de que deseja excluir esta Cadastro?")){
             await db.collection('lists').doc(id).delete();
         }
     };
@@ -43,17 +46,23 @@ const List = () => {
     }, []);
 
     return ( 
-        <div className="row">
-             <div className="col-sm-1"></div>
-             <div className="col-sm-10"></div>
-             
-            <div className="col-md-8 p-2">
-                <Form {...{addOrEditList, currentId, list}} />
-            </div>
+      <>
+
+            <Formulario>
+                <Registration {...{addOrEditList, currentId, list}} />
+            </Formulario>
+
+
+            <Title>
+                Listagem dos Cadastros
+              </Title>
+            <Listagem>
+
             
-            <table class="table table-striped">
-            
-                <thead>
+ 
+            <Table striped bordered hover variant="dark">
+           
+            <thead>
                                 <tr>
                                     <th>Nome:</th>
                                     <th>Idade</th>
@@ -65,9 +74,7 @@ const List = () => {
                                  
                                 </tr>
                                 </thead>
-
-                    <tbody>
-                    
+                <tbody>
                 {list.map(list => (
                                 <tr key={list.id}>
                                     <td>{list.name}</td>
@@ -100,17 +107,14 @@ const List = () => {
                                 </tr>
                               
                               ))}
-                                </tbody>
-                            </table>
-                           </div>
-                      
-                   
-                
-            
-        
+                </tbody>
+                </Table>
+                </Listagem>
+        </>
     );    
     
 }
 
 
 export default List;
+
